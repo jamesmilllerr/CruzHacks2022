@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Misinformation Hack</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename ='style.css') }}">
+</head>
+
+<body>
+    <header>
+        </form>
+        <div class="main">
+            <div class="parent">
+                <div class="logo">
+                    <img src="https://kccollegegameday.com/wp-content/uploads/2009/01/bluegoldblack400.jpg">
+                </div>
+                <div class="title">
+                    <h1>Misinformation Article Finder</h1>
+                </div>
+            </div>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+        <div class="button">
+            <form action="/data" method = "POST">
+                <p>Text <input type = "text" name = "link" /></p>
+                <p><input type = "submit" value = "Check" /></p>
+            </form>
+            
+        </div>
+        <div class="buttonChild">
+            <p> Your Link: "{{form_data["link"]}}"</p>
+        </div>
+
+    </header>
+</body>
+
+</html>
